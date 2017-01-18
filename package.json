@@ -1,18 +1,24 @@
 {
   "name": "pilltime",
+  "version": "0.0.1",
   "scripts": {
     "start": "nodemon --harmony-async-await index.js",
     "lint": "eslint .",
     "lint:fix": "lint --fix"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
-    "eslint-plugin-import": "latest"
+    "eslint-plugin-import": "latest",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "koa": "2",
-    "koa-router": "next"
+    "koa-bodyparser": "next",
+    "koa-convert": "Next",
+    "koa-generic-session": "next",
+    "koa-passport": "next",
+    "koa-router": "next",
+    "oauth2orize": "^1.7.0"
   }
 }

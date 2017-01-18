@@ -1,0 +1,4 @@
+- user auth
+- timer api
+- https://github.com/tgriesser/knex
+- https://github.com/jaredhanson/oauth2orize
