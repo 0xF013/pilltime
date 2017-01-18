@@ -1,0 +1,18 @@
+{
+  "name": "pilltime",
+  "scripts": {
+    "start": "nodemon --harmony-async-await index.js",
+    "lint": "eslint .",
+    "lint:fix": "lint --fix"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "latest"
+  },
+  "dependencies": {
+    "koa": "2",
+    "koa-router": "next"
+  }
+}
