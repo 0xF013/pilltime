@@ -4,21 +4,28 @@
   "scripts": {
     "start": "nodemon --harmony-async-await index.js",
     "lint": "eslint .",
-    "lint:fix": "lint --fix"
+    "lint:fix": "lint --fix",
+    "test": "node --harmony-async-await ./node_modules/.bin/jest",
+    "test:watch": "yarn test -- --watch",
+    "migrate": "knex migrate:latest"
   },
   "devDependencies": {
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "latest",
+    "jest": "^18.1.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
+    "knex": "^0.12.6",
     "koa": "2",
     "koa-bodyparser": "next",
     "koa-convert": "Next",
     "koa-generic-session": "next",
     "koa-passport": "next",
     "koa-router": "next",
-    "oauth2orize": "^1.7.0"
+    "oauth2orize": "^1.7.0",
+    "sqlite3": "^3.1.8"
   }
 }

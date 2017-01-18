@@ -1,6 +1,16 @@
 {
   "extends": "airbnb/base",
   "rules": {
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "comma-dangle": 0,
+    "arrow-body-style": 0,
+    "arrow-parens": 0
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeEach": true,
+    "jest": true
   }
 }
