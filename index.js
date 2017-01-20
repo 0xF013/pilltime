@@ -9,9 +9,7 @@ require('dotenv').config();
 
 const dataSource = knex(require('./knexfile')[process.env.NODE_ENV]);
 const userRepository = require('./lib/repositories/user-repository')(dataSource);
-const timerRepository = {
-  getAll: () => new Promise((resolve) => resolve([{ a: 12 }]))
-};
+const timerRepository = require('./lib/repositories/timer-repository')(dataSource);
 
 const app = new Koa();
 const router = new Router();
@@ -36,7 +34,7 @@ router.get('/timers', async (ctx) => {
   ctx.body = timers;
 });
 
-router.post('/timers', async (ctx, next) => {
+router.post('/timers', async (ctx) => {
   const timer = await timerRepository.create(Object.assign({}, ctx.params, {
     user_id: ctx.state.user.id
   }));
