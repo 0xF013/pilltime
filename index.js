@@ -35,9 +35,10 @@ router.get('/timers', async (ctx) => {
 });
 
 router.post('/timers', async (ctx) => {
-  const timer = await timerRepository.create(Object.assign({}, ctx.params, {
+  const payload = Object.assign({}, ctx.params, {
     user_id: ctx.state.user.id
-  }));
+  });
+  const timer = await timerRepository.create(payload);
   ctx.body = timer;
 });
 
